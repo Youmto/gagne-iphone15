@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" href="logo.png" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Participez à notre expérience exclusive pour gagner un iPhone 15 Pro Titanium. Une opportunité unique pour les membres premium.">
+    <meta name="keywords" content="iPhone 15 Pro, concours, gagner, pronostics, premium, téléphone, Apple">
+    <meta property="og:title" content="Expérience Exclusive - Gagnez l'iPhone 15 Pro | Pronostics Premium">
+    <meta property="og:description" content="Tentez de remporter l'iPhone 15 Pro Titanium dans notre concours exclusif.">
+    <meta property="og:image" content="https://example.com/iphone15pro-social.jpg">
+    <meta property="og:url" content="https://votresite.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Expérience Exclusive - Gagnez l'iPhone 15 Pro | Pronostics Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --apple-dark: #1d1d1f;
+            --apple-blue: #0071e3;
+            --apple-blue-hover: #0077ed;
+            --apple-light: #f5f5f7;
+            --titanium-gradient: linear-gradient(135deg, #86868b 0%, #2c2c2e 100%);
+            --success-green: #34c759;
+            --error-red: #ff3b30;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--apple-light);
+            color: var(--apple-dark);
+            margin: 0;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Hero Section avec effet parallaxe */
+        .parallax-hero {
+            height: 100vh;
+            min-height: 650px;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('https://example.com/iphone15pro-parallax.jpg');
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            padding: 20px;
+        }
+        
+        .parallax-hero::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.6);
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 20px;
+            width: 100%;
+        }
+        
+        h1 {
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        /* Animation 3D de l'iPhone */
+        .iphone-3d-container {
+            perspective: 1000px;
+            margin: 2rem auto;
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .iphone-3d {
+            width: 100%;
+            padding-bottom: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .iphone-3d img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotateY(0deg); }
+            50% { transform: translateY(-20px) rotateY(10deg); }
+        }
+        
+        /* Formulaire holographique */
+        .holographic-form {
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1),
+                        0 0 0 1px rgba(255,255,255,0.2) inset;
+            padding: 2.5rem;
+            max-width: 600px;
+            margin: -100px auto 3rem;
+            position: relative;
+            z-index: 3;
+            border: 1px solid rgba(255,255,255,0.3);
+            width: calc(100% - 40px);
+        }
+        
+        /* Bouton néon */
+        .neon-button {
+            background: none;
+            color: var(--apple-blue);
+            border: 2px solid var(--apple-blue);
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 10px rgba(0,113,227,0.5);
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+        }
+        
+        .neon-button:hover {
+            box-shadow: 0 0 20px rgba(0,113,227,0.8);
+            transform: translateY(-3px);
+            background-color: rgba(0, 113, 227, 0.05);
+            color: var(--apple-blue-hover);
+            border-color: var(--apple-blue-hover);
+        }
+        
+        .neon-button:active {
+            transform: translateY(1px);
+        }
+        
+        /* Compteur dynamique */
+        .counter-container {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .counter-box {
+            background: var(--titanium-gradient);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            font-size: 1.5rem;
+            min-width: 120px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .counter-box small {
+            display: block;
+            font-size: 0.8rem;
+            opacity: 0.9;
+            margin-top: 0.3rem;
+        }
+        
+        /* Section partage interactive */
+        .share-panel {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            margin: 3rem auto;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            text-align: center;
+            width: calc(100% - 40px);
+        }
+        
+        .social-bubbles {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .social-bubble {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .social-bubble:hover {
+            transform: translateY(-5px) scale(1.1);
+        }
+        
+        .social-bubble img {
+            width: 30px;
+            height: 30px;
+        }
+        
+        /* Formulaire styles */
+        input, button {
+            font-family: inherit;
+        }
+        
+        input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: border 0.3s, box-shadow 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: var(--apple-blue);
+            box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.2);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .checkbox-group input {
+            width: auto;
+            margin-right: 0.5rem;
+        }
+        
+        /* Effets spéciaux */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .parallax-hero {
+                background-attachment: scroll;
+                min-height: 600px;
+            }
+            
+            .holographic-form {
+                margin-top: -50px;
+                padding: 1.5rem;
+            }
+            
+            .neon-button {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .counter-box {
+                min-width: 100px;
+                padding: 0.8rem 1rem;
+                font-size: 1.2rem;
+            }
+            
+            .holographic-form {
+                padding: 1.5rem 1rem;
+            }
+        }
+        
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Messages */
+        .success-message {
+            color: var(--success-green);
+            margin-top: 1rem;
+            font-weight: 500;
+            display: none;
+        }
+        
+        .error-message {
+            color: var(--error-red);
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Effet particules -->
+    <canvas id="particles" class="particles"></canvas>
+    
+    <!-- Section Hero avec parallaxe -->
+    <section class="parallax-hero animate__animated animate__fadeIn">
+        <div class="hero-content">
+            <h1 class="animate__animated animate__fadeInDown">EXPERIENCE EXCLUSIVE</h1>
+            <p class="animate__animated animate__fadeIn animate__delay-1s" style="font-size: clamp(1.2rem, 3vw, 1.5rem); margin-bottom: 2rem;">
+                Tentez de remporter l'iPhone 15 Pro Titanium 256GB
+            </p>
+            
+            <div class="iphone-3d-container animate__animated animate__zoomIn animate__delay-2s">
+                <div class="iphone-3d">
+                    <img src="iphone.png" alt="iPhone 15 Pro Titanium" loading="lazy">
+                </div>
+            </div>
+            
+            <a href="#participer" class="neon-button animate__animated animate__pulse animate__infinite animate__slower">
+                DÉBLOQUER MA PARTICIPATION
+            </a>
+            
+            <div class="counter-container animate__animated animate__fadeIn animate__delay-3s">
+                <div class="counter-box">
+                    <div id="participants-counter">2,458</div>
+                    <small>Participants</small>
+                </div>
+                <div class="counter-box">
+                    <div id="days-counter">07</div>
+                    <small>Jours restants</small>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Formulaire holographique -->
+    <section id="participer" class="holographic-form animate__animated animate__fadeInUp">
+        <h2 style="text-align: center; margin-bottom: 2rem;">VOTRE ACCÈS PRIVILÉGIÉ</h2>
+        
+        <form id="premium-form" style="max-width: 500px; margin: 0 auto;">
+            <div class="form-group">
+                <input type="text" id="fullname" placeholder="Nom complet" required>
+                <div class="error-message" id="name-error">Veuillez entrer votre nom complet</div>
+            </div>
+            
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email professionnel" required>
+                <div class="error-message" id="email-error">Veuillez entrer une adresse email valide</div>
+            </div>
+            
+            <div class="form-group">
+                <input type="tel" id="phone" placeholder="Téléphone (pour vous prévenir si vous gagnez)">
+                <div class="error-message" id="phone-error">Format de téléphone invalide</div>
+            </div>
+            
+            <div class="checkbox-group">
+                <input type="checkbox" id="terms" required>
+                <label for="terms">J'accepte les <a href="#" style="color: var(--apple-blue); text-decoration: underline;">conditions du jeu</a></label>
+            </div>
+            
+            <button type="submit" class="neon-button" style="display: block; width: 100%; margin: 0 auto;">
+                VALIDER MON DOSSIER DE PARTICIPATION
+            </button>
+            
+            <div class="success-message" id="form-success">
+                Participation enregistrée avec succès !
+            </div>
+        </form>
+    </section>
+    
+    <!-- Section Partage Premium (apparaît après validation) -->
+    <section id="premium-share" class="share-panel" style="display: none;">
+        <div class="pulse-animation">
+            <h2 style="margin-bottom: 1rem;">🎉 PARTICIPATION CONFIRMÉE !</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.1rem;">
+                <strong>Boostez vos chances</strong> en partageant cette expérience exclusive<br>
+                et en rejoignant notre communauté premium
+            </p>
+        </div>
+        
+        <div style="background: var(--apple-light); padding: 1.5rem; border-radius: 15px; margin-bottom: 2rem;">
+            <h3 style="margin-top: 0; margin-bottom: 1rem;">NOTRE CHAÎNE TELEGRAM ELITE</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 0.5rem;">
+                <a href="https://t.me/GRDPRONOSGC" target="_blank" style="color: var(--apple-blue); text-decoration: none; font-weight: 600;">
+                    t.me/GRDPRONOSGC
+                </a>
+            </p>
+            <p>Accédez à des contenus exclusifs et augmentez vos chances de gagner</p>
+        </div>
+        
+        <h4 style="margin-bottom: 1rem;">PARTAGER L'OPPORTUNITÉ :</h4>
+        <div class="social-bubbles">
+            <div class="social-bubble" style="background: #25D366;" onclick="shareOnWhatsApp()" aria-label="Partager sur WhatsApp">
+                <img src="whatsapp-color-svgrepo-com.svg" alt="WhatsApp" width="30" height="30" loading="lazy">
+            </div>
+            <div class="social-bubble" style="background: #0088CC;" onclick="shareOnTelegram()" aria-label="Partager sur Telegram">
+                <img src="telegram-svgrepo-com.svg" alt="Telegram" width="30" height="30" loading="lazy">
+            </div>
+            <div class="social-bubble" style="background: #1877F2;" onclick="shareOnFacebook()" aria-label="Partager sur Facebook">
+                <img src="facebook-svgrepo-com.svg" alt="Facebook" width="30" height="30" loading="lazy">
+            </div>
+        </div>
+        
+        <script>
+            const promoMessage = `🎉 Rejoignez notre canal privé Telegram pour découvrir les coulisses de l'expérience "Exclusive".\nAccès limité. Offres secrètes, contenu VIP et avant-premières réservés à notre communauté.\n👉 Rejoindre maintenant https://t.me/GRDPRONOSGC`;
+        
+            function shareOnWhatsApp() {
+                const encoded = encodeURIComponent(promoMessage);
+                window.open(`https://wa.me/?text=${encoded}`, '_blank');
+            }
+        
+            function shareOnTelegram() {
+                const encoded = encodeURIComponent(promoMessage);
+                window.open(`https://t.me/share/url?url=https://t.me/GRDPRONOSGC&text=${encoded}`, '_blank');
+            }
+        
+            function shareOnFacebook() {
+                const encoded = encodeURIComponent(promoMessage);
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=https://t.me/GRDPRONOSGC&quote=${encoded}`, '_blank');
+            }
+        </script>
+        
+        
+        <div style="margin-top: 2.5rem;">
+            <div style="display: flex; justify-content: space-between; margin-bottom: 0.5rem;">
+                <span>Votre niveau d'engagement</span>
+                <span id="engagement-level">Débutant</span>
+            </div>
+            <div style="height: 10px; background: #e0e0e0; border-radius: 5px; overflow: hidden;">
+                <div id="engagement-bar" style="height: 100%; width: 10%; background: var(--apple-blue); transition: width 0.5s;"></div>
+            </div>
+            
+            <p id="engagement-comment" style="margin-top: 1rem; font-style: italic;">
+                Partagez pour atteindre le niveau Expert et maximiser vos chances !
+            </p>
+        </div>
+    </section>
+    
+    <script>
+        // Effet particules optimisé
+        document.addEventListener('DOMContentLoaded', function() {
+            const canvas = document.getElementById('particles');
+            const ctx = canvas.getContext('2d');
+            
+            function resizeCanvas() {
+                canvas.width = window.innerWidth;
+                canvas.height = window.innerHeight;
+            }
+            
+            window.addEventListener('resize', resizeCanvas);
+            resizeCanvas();
+            
+            const particles = [];
+            const particleCount = Math.floor(window.innerWidth / 10);
+            
+            for (let i = 0; i < particleCount; i++) {
+                particles.push({
+                    x: Math.random() * canvas.width,
+                    y: Math.random() * canvas.height,
+                    size: Math.random() * 3 + 1,
+                    speedX: Math.random() * 0.5 - 0.25,
+                    speedY: Math.random() * 0.5 - 0.25
+                });
+            }
+            
+            function animateParticles() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                ctx.fillStyle = 'rgba(0, 113, 227, 0.5)';
+                
+                particles.forEach(particle => {
+                    ctx.beginPath();
+                    ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+                    ctx.fill();
+                    
+                    particle.x += particle.speedX;
+                    particle.y += particle.speedY;
+                    
+                    if (particle.x < 0 || particle.x > canvas.width) particle.speedX *= -1;
+                    if (particle.y < 0 || particle.y > canvas.height) particle.speedY *= -1;
+                });
+                
+                requestAnimationFrame(animateParticles);
+            }
+            
+            animateParticles();
+            
+            // Validation du formulaire
+            const form = document.getElementById('premium-form');
+            const nameInput = document.getElementById('fullname');
+            const emailInput = document.getElementById('email');
+            const phoneInput = document.getElementById('phone');
+            const termsCheckbox = document.getElementById('terms');
+            
+            function validateName() {
+                const name = nameInput.value.trim();
+                const errorElement = document.getElementById('name-error');
+                
+                if (name.length < 3) {
+                    errorElement.style.display = 'block';
+                    return false;
+                } else {
+                    errorElement.style.display = 'none';
+                    return true;
+                }
+            }
+            
+            function validateEmail() {
+                const email = emailInput.value.trim();
+                const errorElement = document.getElementById('email-error');
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                
+                if (!emailRegex.test(email)) {
+                    errorElement.style.display = 'block';
+                    return false;
+                } else {
+                    errorElement.style.display = 'none';
+                    return true;
+                }
+            }
+            
+            function validatePhone() {
+                const phone = phoneInput.value.trim();
+                const errorElement = document.getElementById('phone-error');
+                
+                if (phone && !/^[\d\s\+\-\.\(\)]{10,15}$/.test(phone)) {
+                    errorElement.style.display = 'block';
+                    return false;
+                } else {
+                    errorElement.style.display = 'none';
+                    return true;
+                }
+            }
+            
+            function validateTerms() {
+                if (!termsCheckbox.checked) {
+                    return false;
+                }
+                return true;
+            }
+            
+            nameInput.addEventListener('blur', validateName);
+            emailInput.addEventListener('blur', validateEmail);
+            phoneInput.addEventListener('blur', validatePhone);
+            
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const isNameValid = validateName();
+                const isEmailValid = validateEmail();
+                const isPhoneValid = validatePhone();
+                const isTermsValid = validateTerms();
+                
+                if (isNameValid && isEmailValid && isPhoneValid && isTermsValid) {
+                    // Simulation d'envoi
+                    document.getElementById('form-success').style.display = 'block';
+                    
+                    // Afficher la section de partage après un délai
+                    setTimeout(() => {
+                        document.getElementById('premium-share').style.display = 'block';
+                        window.scrollTo({
+                            top: document.getElementById('premium-share').offsetTop,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Animation du compteur
+                        let participants = 2458;
+                        const counterInterval = setInterval(() => {
+                            participants += Math.floor(Math.random() * 3) + 1;
+                            document.getElementById('participants-counter').textContent = participants.toLocaleString();
+                        }, 3000);
+                        
+                        // Stocker l'intervalle pour le nettoyer si nécessaire
+                        form.dataset.counterInterval = counterInterval;
+                    }, 1000);
+                }
+            });
+            
+            // Fonctions de partage
+            function shareOnWhatsApp() {
+                const text = "Je participe à une expérience exclusive pour gagner l'iPhone 15 Pro Titanium ! Rejoins la communauté premium sur Telegram : https://t.me/GRDPRONOSGC #ConcoursExclusif";
+                window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
+                updateEngagement(25);
+            }
+            
+            function shareOnTelegram() {
+                const text = "🚀 Expérience Exclusive - Gagnez l'iPhone 15 Pro Titanium ! Rejoignez la communauté premium pour maximiser vos chances : https://t.me/GRDPRONOSGC #ConcoursElite";
+                window.open(`https://t.me/share/url?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(text)}`, '_blank');
+                updateEngagement(30);
+            }
+            
+            function shareOnFacebook() {
+                const text = "Je tente de remporter l'iPhone 15 Pro Titanium dans cette expérience exclusive ! Découvrez comment participer : https://t.me/GRDPRONOSGC";
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}&quote=${encodeURIComponent(text)}`, '_blank');
+                updateEngagement(15);
+            }
+            
+            // Système d'engagement
+            let engagement = 10;
+            const levels = {
+                10: "Débutant",
+                40: "Intermédiaire",
+                70: "Avancé",
+                100: "Expert"
+            };
+            
+            function updateEngagement(points) {
+                engagement = Math.min(engagement + points, 100);
+                document.getElementById('engagement-bar').style.width = engagement + '%';
+                
+                for (const [threshold, level] of Object.entries(levels)) {
+                    if (engagement >= threshold) {
+                        document.getElementById('engagement-level').textContent = level;
+                    }
+                }
+                
+                if (engagement >= 70) {
+                    document.getElementById('engagement-comment').textContent = "Niveau Elite atteint ! Vous maximisez vos chances de gagner !";
+                } else if (engagement >= 40) {
+                    document.getElementById('engagement-comment').textContent = "Excellent engagement ! Continuez pour atteindre le niveau supérieur.";
+                }
+            }
+            
+            // Compteur de jours
+            function updateDaysCounter() {
+                const endDate = new Date();
+                endDate.setDate(endDate.getDate() + 7);
+                
+                function update() {
+                    const now = new Date();
+                    const diff = endDate - now;
+                    const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+                    document.getElementById('days-counter').textContent = days.toString().padStart(2, '0');
+                }
+                
+                update();
+                setInterval(update, 86400000); // Mise à jour quotidienne
+            }
+            
+            updateDaysCounter();
+        });
+    </script>
+</body>
+</html>
